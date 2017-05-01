@@ -1,0 +1,25 @@
+{
+  "name": "trail-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"tsc --watch\" \"next\"",
+    "build": "next build",
+    "start": "next start",
+    "build-tsc": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^2.3.0-alpha1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "@types/react": "^15.0.23",
+    "concurrently": "^3.4.0",
+    "typescript": "^2.3.2"
+  }
+}
