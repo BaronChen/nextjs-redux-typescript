@@ -2,3 +2,4 @@ node_modules/
 .next/
 pages/**/*.js
 components/**/*.js
+*.js
