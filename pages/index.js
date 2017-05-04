@@ -1,11 +1,11 @@
 import * as React from 'react';
 import HelloWorld from '../components/hellow-world/hello-world.component';
 import { updateGreeting } from '../components/hellow-world/hello-world.actions';
-import * as withRedux from 'next-redux-wrapper';
+import withRedux from 'next-redux-wrapper';
 import { initStore } from '../store';
 
-class Index extends React.Component<any, any> {
-	constructor(props: any) {
+class Index extends React.Component {
+	constructor(props) {
     	super(props);
     }
 

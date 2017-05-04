@@ -3,9 +3,9 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import { updateGreeting } from './hello-world.actions';
 
-class HelloWorld extends React.Component<any, any> {
+class HelloWorld extends React.Component {
 
-    constructor(props: any) {
+    constructor(props) {
         super(props);
     }
 
@@ -13,7 +13,7 @@ class HelloWorld extends React.Component<any, any> {
         this.props.updateGreeting(event.target.value)
     }
 
-    public render() {
+    render() {
         const { greeting } = this.props;
         return (
             <div>
