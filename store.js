@@ -1,14 +1,15 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const redux_1 = require("redux");
-const hello_world_reducer_1 = require("./components/hellow-world/hello-world.reducer");
-const redux_thunk_1 = require("redux-thunk");
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { initialHelloWorldState, helloWorld } from './components/hellow-world/hello-world.reducer';
+import thunkMiddleware from 'redux-thunk';
+
 const initialState = {
-    helloWorld: hello_world_reducer_1.initialHelloWorldState
+    helloWorld: initialHelloWorldState
 };
-const reducers = redux_1.combineReducers({
-    helloWorld: hello_world_reducer_1.helloWorld
+
+const reducers = combineReducers({
+    helloWorld
 });
-exports.initStore = (state = initialState) => {
-    return redux_1.createStore(reducers, state, redux_1.applyMiddleware(redux_thunk_1.default));
-};
+
+export const initStore = (state = initialState) => {
+    return createStore(reducers, state, applyMiddleware(thunkMiddleware));
+}
